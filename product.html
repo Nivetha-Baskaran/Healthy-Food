@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Website Using HTML And CSS</title>
+    <link rel="stylesheet" type="text/css" href="./product.css" />
+    <script src="https://kit.fontawesome.com/8d1580c953.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+    <div class="ProductMain">
+        <div class="NavCenter">
+        <nav class="NavMenu">
+            <h1><a href="./index.html" class="NavAnchor">Click Home</a></h1>
+            <input type="checkbox" id="menu"/>
+                    <label for="menu">
+                        <i class="fa-solid fa-bars menuIcon"></i>
+                    </label>
+            <div class="SubMenu">
+                <a href="./home.html"/>HOME</a>
+                <a href="./about.html"/>ABOUT</a>
+                <a href="./product.html">PRODUCT</a>
+                <a href="./contact.html">CONTACT</a>
+            </div> <!--NavMenu Ending-->
+        </nav>
+        </div> <!--NavCenter Ending-->
+        <div class="ProductContainer">
+            <h1 class="Clr">Check Out</h1>
+            <marquee behavior="alternate" scrollamount="15" direction="right">
+                <h2 class="Run">OUR RECIPE</h2>
+            </marquee>
+            <div class="Txt">
+                <p class="Producttxt">Indulge in our culinary delights where every dish is meticulously prepared with
+                    passion and expertise, showcasing the finest ingredients and flavours. Form comforting classics to
+                    innovative creations, our recipes embody a commitment to excellence, ensuring each dining experience
+                    is
+                    unforgettable and filled with delight.</p>
+                <button class="Productbtn">Learn More</button>
+            </div>
+            <div class="ProductImages">
+                <div class="FirstImage">
+                    <img src="./meals.jpg" />
+                    <p>Full Meals</p>
+                    <h3>&#8377 150</h3>
+                    <button>ADD TO CART</button>
+                </div>
+                <div class="SecondImage">
+                    <img src="./meals 1.jpg" />
+                    <p>Chappathi With Rice</p>
+                    <h3>&#8377 200</h3>
+                    <button>ADD TO CART</button>
+                </div>
+                <div class="ThirdImage">
+                    <img src="./Nonveg.jpg" />
+                    <p>Non-Veg Meals</p>
+                    <h3>&#8377 250</h3>
+                    <button>ADD TO CART</button>
+                </div>
+                <div class="FourthImage">
+                    <img src="./samba.jpg" />
+                    <p>Samba Rice Meals</p>
+                    <h3>&#8377 150</h3>
+                    <button>ADD TO CART</button>
+                </div>
+            </div>
+        </div> <!--ProductContainer Ending-->
+        <div class="ServiceContainer">
+            <h1 class="Clr">Explore</h1>
+            <h2>Our Services</h2>
+            <div class="ServiceImages">
+                <div class="OneImage">
+                    <img src="./custom.jpg" />
+                    <i class="fa-solid fa-plate-wheat"></i>
+                    <h3>Custom Recipes</h3>
+                    <p>Experience our bespoke menu, crafted with care and passion for a distinctive culinary journey.
+                    </p>
+                    <button>Read More</button>
+                </div>
+                <div class="TwoImage">
+                    <img src="./custom 1.jfif" />
+                    <i class="fa-solid fa-house"></i>
+                    <h3>Home Delivery</h3>
+                    <p>Convenient home delivery for our delicious menu, ensuring fresh flavours delivered to your
+                        doorstep.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="ThreeImage">
+                    <img src="./custom 2.webp" />
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <h3>Healthy Food</h3>
+                    <p>Healthy Food, expertly prepared to perfection for a delectable during experience.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div> <!--ServiceContainer Ending-->
+    </div><!--ProductMain Ending-->
+</body>
+
+</html>

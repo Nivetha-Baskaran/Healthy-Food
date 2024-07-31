@@ -1,0 +1,264 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*  nav  */
+.NavCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    background-color: rgb(233, 230, 225);
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width:90%;
+    border-radius: 20px;
+    padding: 10px 30px;
+    position: fixed;
+    top:3%;
+    z-index:999;
+}
+nav h1{
+    font-size: 32px;
+}
+nav .SubMenu{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+}
+a:first-child{
+    text-decoration: none;
+    color: black;
+}
+nav .SubMenu a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+}
+nav h1:hover{
+    text-shadow: 0px 0px 10px red;
+    transform: scale(1.2);
+    background-color:peachpuff;
+    border-radius: 5px;
+}
+nav .SubMenu a:hover{
+    background-color: peachpuff;
+    text-shadow: 0px 0px 10px red;
+    transform: scale(1.3);
+    border-radius: 5px;
+}
+.menuIcon{
+    font-size: 30px;
+    visibility: hidden;
+}
+#menu{display: none;}
+#menu:checked ~ .SubMenu{
+    left:30px;
+}
+.ContactContainer{
+    background-color: whitesmoke;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+ .List{
+    font-size: 30px;
+    color: orangered;
+}
+.LeftContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:20px;
+
+}
+.LeftContainer span{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+.LeftContainer p{
+    font-size:25px;
+}
+/*   ContactForm  */
+.ContactForm{
+    background-color: white;
+    padding: 3px;
+    width:30%;
+    height: 350px;
+    box-shadow: 0px 5px 15px black;
+    border-radius: 5px;
+    margin:20px;
+}
+.ContactForm h3{
+    font-size: 30px;
+    font-family: verdana;
+    text-align: center;
+    color: orchid;
+}
+form{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    flex-wrap: wrap;
+}
+input{
+    width: 100%;
+    border:2px solid rgb(63, 10, 237);
+    padding: 10px;
+    outline: none;
+}
+input:focus{
+    background-color: yellow;
+    color: red;
+    border:2px solid red;
+}
+.textarea:focus{
+    background-color: yellow;
+    color: red;
+}
+.Group{
+    position: relative;
+}
+.placeholder{
+    position:absolute;
+    top:10px;
+    left:8px;
+    font-size:14px;
+    padding:0px 5px;
+    padding:0px 5px;
+    transition:0.3s;
+    color:rgb(63, 10, 237);
+    }
+.Name:focus + .placeholder{
+    top:-10px;
+    color:red;
+    background-color:#fff;
+}
+/* input::placeholder{
+    color: grey;
+} */
+.textarea{
+    height:100px;
+    padding-bottom: 60px;
+}
+button{
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border: none;
+    width:40%;
+}
+.FooterIcon i{font-size: 30px;}
+/* Ressponsive Code  */
+@media only screen and (min-width:970px) and (max-width:1150px){
+    .ContactForm{
+        width:35%;
+    }
+}
+@media only screen and (min-width:870px) and (max-width:970px){
+    .ContactForm{
+        width:40%;
+    }
+}
+/*  Tablet screen  */
+@media only screen and (min-width:600px) and (max-width:870px){
+    .ContactContainer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .ContactForm{
+        width:70%;
+    }
+    .SubMenu{
+        background-color: rgba(0, 0, 0, 0.229);
+        position: fixed;
+        left:100%;
+        top:140px;
+        justify-content:flex-start;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 50%;
+        z-index: 998;
+        box-shadow: 5px 5px 10px black;
+    }
+    nav .SubMenu a{
+        color: yellow ;
+    }
+
+    .menuIcon{visibility: visible;}
+}
+/* Mobile Screen */
+@media only screen and (min-width:300px) and (max-width:600px){
+    .ContactContainer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .LeftContainer{
+        text-align: center;
+    }
+    .ContactForm{
+        width:90%;
+    }
+    button{
+        width: 50%;
+    }
+    .SubMenu{
+        background-color: rgba(0, 0, 0, 0.229);
+        position: fixed;
+        left:100%;
+        top:140px;
+        justify-content:flex-start;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 50%;
+        z-index: 998;
+        box-shadow: 5px 5px 10px black;
+    }
+    nav .SubMenu a{
+        color: yellow;
+    }
+    .AboutImage{padding-top: 80px;}
+    .menuIcon{visibility: visible;}
+}
+
+
+/* -------- Footer ------- */
+footer{
+    background-color:rgb(15, 0, 0);
+    width: 100%;
+    min-height: 220px;
+}
+.FooterContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+.FooterIcon i{
+    color: white;
+    padding: 15px;
+}
+.FooterContainer h4{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}

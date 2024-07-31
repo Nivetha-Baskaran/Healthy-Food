@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*  nav  */
+.NavCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    background-color: papayawhip;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width:90%;
+    border-radius: 20px;
+    padding: 10px 30px;
+    position: fixed;
+    top:3%;
+    z-index:999;
+}
+nav h1{
+    font-size: 32px;
+}
+nav .SubMenu{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+}
+a:first-child{
+    text-decoration: none;
+    color: black;
+}
+nav .SubMenu a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+}
+nav h1:hover{
+    text-shadow: 0px 0px 10px yellow;
+    transform: scale(1.2);
+    background-color:white;
+    border-radius: 5px;
+}
+nav .SubMenu a:hover{
+    background-color: white;
+    text-shadow: 0px 0px 10px yellow;
+    transform: scale(1.3);
+    border-radius: 5px;
+}
+.menuIcon{
+    font-size: 30px;
+    visibility: hidden;
+}
+#menu{display: none;}
+#menu:checked ~ .SubMenu{
+    left:30px;
+}
+.AboutContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 500px;
+    gap:40px;
+    padding: 20px 0px;
+}
+.AboutImage{
+   width:30%;
+    object-fit: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Aboutus{
+    width:40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+.Aboutus h1{
+    color: purple;
+    font-size: 25px;
+    font-family: Segoe UI;
+}
+.Aboutus h2{
+    color: rgb(0, 128, 70);
+    font-size: 25px;
+    font-family: Segoe UI;
+}
+.Aboutus p{
+    font-weight: bold;
+    font-family: Segoe UI;
+}
+.Aboutus button{
+    color: white;
+    background-color: crimson;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+}
+.AboutImage:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+/*  Rotate */
+.Rotate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Rotate img{
+    width:300px;
+    height:300px;
+    padding: 10px;
+    background-color: coral;
+    border: 3px solid crimson;
+    border-radius: 50%;
+    animation:type 60s steps(60, end) infinite;
+}
+@keyframes type{
+    to{
+        /* width:0; */
+        transform: rotate(360deg);
+    }
+}
+/*   Responsive code   */
+@media only screen and (min-width:600px) and (max-width:900px){
+    .AboutContainer{
+        flex-direction: column;
+    }
+    .AboutImage{
+        width:50%;
+    }
+    .Aboutus{
+        width:65%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .AboutImage{padding-top: 80px;}
+    .SubMenu{
+        background-color: rgba(0, 0, 0, 0.229);
+        position: fixed;
+        left:100%;
+        top:140px;
+        justify-content:flex-start;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 50%;
+        z-index: 998;
+        box-shadow: 5px 5px 10px black;
+    }
+    nav .SubMenu a{
+        color: rgb(247, 12, 12);
+    }
+
+    .menuIcon{visibility: visible;}
+}
+@media only screen and (min-width:300px) and (max-width:600px){
+    .AboutContainer{
+        flex-direction: column;
+    }
+    .AboutImage{
+        width:90%;
+    }
+    .Aboutus{
+        width:95%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .SubMenu{
+        background-color: rgba(0, 0, 0, 0.229);
+        position: fixed;
+        left:100%;
+        top:140px;
+        justify-content:flex-start;
+        align-items: start;
+        flex-direction: column;
+        padding-top: 20px;
+        width: 50%;
+        z-index: 998;
+        box-shadow: 5px 5px 10px black;
+    }
+    nav .SubMenu a{
+        color: rgb(247, 12, 12);
+    }
+    .AboutImage{padding-top: 80px;}
+    .menuIcon{visibility: visible;}
+}
